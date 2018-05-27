@@ -1,0 +1,43 @@
+# OS, and IDEs
+.idea/
+*.iml
+.project
+.pydevproject
+.DS_Store
+*.pyc
+.swp
+*.env
+*.aes
+*.zip
+dist/
+.pytest_cache/
+.scannerwork
+.vscode/
+__pycache__
+.coverage
+coverage.xml
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, build with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
