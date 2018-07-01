@@ -13,7 +13,7 @@
     <url>https://github.com/kdeng/appengine-standard-java-jsp-sample</url>
 
     <properties>
-        <gcp.service.version>4</gcp.service.version>
+        <gcp.service.version>5</gcp.service.version>
         <java.version>1.8</java.version>
         <appengine-maven-plugin.version>2.0.0-rc1</appengine-maven-plugin.version>
         <jetty-maven-plugin.version>9.4.11.v20180605</jetty-maven-plugin.version>
@@ -21,10 +21,40 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-tools-sdk</artifactId>
+            <version>1.9.64</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-local-runtime-shared</artifactId>
+            <version>1.9.64</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-local-runtime</artifactId>
+            <version>1.9.64</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-api-stubs</artifactId>
+            <version>1.9.64</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-api-1.0-sdk</artifactId>
+            <version>1.9.64</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>3.1.0</version>
-            <type>jar</type>
             <scope>provided</scope>
         </dependency>
         <dependency>
