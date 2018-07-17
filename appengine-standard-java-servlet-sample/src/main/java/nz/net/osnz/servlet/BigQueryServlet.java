@@ -27,7 +27,6 @@ public class BigQueryServlet extends HttpServlet {
         response.getWriter().println("Hello App Engine - Standard using "
             + SystemProperty.version.get() + " Java "
             + properties.get("java.specification.version")
-            + "<br />username : " + username
         );
 
     }
