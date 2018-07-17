@@ -20,12 +20,43 @@
 <web-app xmlns="http://java.sun.com/xml/ns/javaee" id="webapp-java-jsp-demo" version="3.0">
 
     <servlet>
+        <servlet-name>healthServlet</servlet-name>
+        <servlet-class>nz.net.osnz.servlet.HealthCheckServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>healthServlet</servlet-name>
+        <url-pattern>/_ah/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>bigQueryServlet</servlet-name>
+        <servlet-class>nz.net.osnz.servlet.BigQueryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>bigQueryServlet</servlet-name>
+        <url-pattern>/bigquery/*</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
         <servlet-name>helloServlet</servlet-name>
         <servlet-class>nz.net.osnz.servlet.HelloServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>helloServlet</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/*</url-pattern>
     </servlet-mapping>
+
+
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>admin</web-resource-name>
+            <url-pattern>/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
 
 </web-app>

@@ -50,6 +50,12 @@
             <version>1.9.64</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>com.google.cloud</groupId>
+            <artifactId>google-cloud-bigquery</artifactId>
+            <version>1.35.0</version>
+            <scope>provided</scope>
+        </dependency>
 
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -86,6 +92,9 @@
                     <deploy.stopPreviousVersion>true</deploy.stopPreviousVersion>
                     <deploy.promote>true</deploy.promote>
                     <services>kdeng-java-servlet-demo</services>
+
+                    <devserver.host>localhost</devserver.host>
+                    <devserver.port>8888</devserver.port>
                 </configuration>
             </plugin>
 
@@ -94,6 +103,15 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>${jetty-maven-plugin.version}</version>
             </plugin>
+
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-war-plugin</artifactId>-->
+                <!--<version>3.2.2</version>-->
+                <!--<configuration>-->
+                    <!--<warSourceDirectory>war</warSourceDirectory>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
         </plugins>
 
     </build>

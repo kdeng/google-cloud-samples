@@ -5,6 +5,8 @@
     <runtime>java8</runtime>
     <system-properties>
         <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
+        <!-- setup deadline (in second) for each URLFetch -->
+        <property name="appengine.api.urlfetch.defaultDeadline" value="10"/>
     </system-properties>
     <precompilation-enabled>false</precompilation-enabled>
     <sessions-enabled>true</sessions-enabled>
